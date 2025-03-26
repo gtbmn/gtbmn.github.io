@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Center HMTS UNSOED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F5E1C8',
+                        brown: '#8B5E3C',
+                        darkbrown: '#5C3D2E',
+                        white: '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-darkbrown">
+
+    <!-- Navbar -->
+    <nav class="bg-brown p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="HMTS" class="h-10 mr-3">
+                <a href="#" class="text-white text-xl font-bold">ACADEMIC CENTER HMTS UNSOED</a>
+            </div>
+            <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-4">
+                <li><a href="#" class="text-white hover:text-cream">Home</a></li>
+                <li><a href="#" class="text-white hover:text-cream">Bank Soal</a></li>
+                <li><a href="#" class="text-white hover:text-cream">Bank Materi</a></li>
+                <li><a href="#" class="text-white hover:text-cream">Video Asistensi</a></li>
+                <li><a href="tel:085727557617" class="text-white hover:text-cream">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-darkbrown p-2 transition-all duration-300 ease-in-out">
+            <a href="#" class="block text-white p-2 hover:bg-cream">Home</a>
+            <a href="#" class="block text-white p-2 hover:bg-cream">Bank Soal</a>
+            <a href="#" class="block text-white p-2 hover:bg-cream">Bank Materi</a>
+            <a href="#" class="block text-white p-2 hover:bg-cream">Video Asistensi</a>
+            <a href="tel:085727557617" class="block text-white p-2 hover:bg-cream">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Konten -->
+    <section class="container mx-auto text-center py-10">
+        <h1 class="text-3xl font-bold text-brown">Selamat Datang di Academic Center</h1>
+        <p class="text-darkbrown mt-2">Layanan kami mencakup Bank Soal, Bank Materi, dan Video Asistensi.</p>
+        <p class="text-darkbron mt-2">Hubungi Admin: <a href="tel:085727557617" class="text-brown font-semibold underline">085727557617</a></p>
+    </section>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
